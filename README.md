@@ -1,16 +1,17 @@
 # movie_gallery
 
-A new Flutter project.
+Shows trending, now playing and upcoming movie lists
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+-   Ensure latest Flutter SDK and Git are installed.
+-   Open Terminal/Command Prompt.
+-   Navigate to your desired directory.
+-   Run `git clone https://github.com/shamrat1/movie_gallery.git` to clone the repository.
+-   Navigate into the cloned repository using `cd`.
+-   Run `flutter pub get` to fetch dependencies.
+-   Connect a device or start an emulator.
+-   Ensure the device is recognized with `flutter devices`.
+-   Run the project using `flutter run`.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
