@@ -2,7 +2,7 @@
 
 Shows trending, now playing and upcoming movie lists
 
-[Download APK](https://github.com/shamrat1/firebase_test/blob/main/apks/app-release.apk)
+[Download APK](https://github.com/shamrat1/movie_gallery/blob/main/apks/app-release.apk)
 
 ## Installation
 
