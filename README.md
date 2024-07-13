@@ -2,6 +2,8 @@
 
 Shows trending, now playing and upcoming movie lists
 
+[Download APK](https://github.com/shamrat1/firebase_test/blob/main/apks/app-release.apk)
+
 ## Installation
 
 -   Ensure latest Flutter SDK and Git are installed.
