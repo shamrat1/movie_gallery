@@ -76,7 +76,7 @@ class Cast {
         name: json["name"],
         originalName: json["original_name"],
         popularity: json["popularity"]?.toDouble(),
-        profilePath: json["profile_path"],
+        profilePath: "https://image.tmdb.org/t/p/w200${json["profile_path"]}",
         castId: json["cast_id"],
         character: json["character"],
         creditId: json["credit_id"],

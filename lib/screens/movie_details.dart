@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../models/movie_details_response.dart';
 import '../widgets/cast.dart';
@@ -52,6 +53,7 @@ class MovieContent extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 16.w),
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
@@ -112,9 +114,14 @@ class MovieContent extends StatelessWidget {
                       ),
                     ),
                     SafeArea(
-                      minimum: const EdgeInsets.only(top: 32),
-                      child: BackButton(
+                      minimum: EdgeInsets.only(top: 32.h),
+                      child: ElevatedButton(
                         onPressed: () => Navigator.pop(context),
+                        style: ElevatedButton.styleFrom(
+                          shape: const CircleBorder(),
+                          elevation: 5,
+                        ),
+                        child: const Icon(Icons.arrow_back),
                       ),
                     ),
                   ],
@@ -125,7 +132,7 @@ class MovieContent extends StatelessWidget {
                   return const SizedBox();
                 } else {
                   return Padding(
-                    padding: const EdgeInsets.only(top: 8),
+                    padding: EdgeInsets.only(top: 8.h, left: 16.w, right: 16.w),
                     child: Text(
                       _movieDetailUiModel.overview!,
                       style: Theme.of(context).textTheme.bodyMedium,

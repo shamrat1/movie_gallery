@@ -72,7 +72,8 @@ class MovieDetail {
 
   factory MovieDetail.fromJson(Map<String, dynamic> json) => MovieDetail(
         adult: json["adult"],
-        backdropPath: json["backdrop_path"],
+        backdropPath:
+            "https://image.tmdb.org/t/p/original${json["backdrop_path"]}",
         belongsToCollection: json["belongs_to_collection"],
         budget: json["budget"],
         genres: json["genres"] == null
@@ -88,7 +89,7 @@ class MovieDetail {
         originalTitle: json["original_title"],
         overview: json["overview"],
         popularity: json["popularity"]?.toDouble(),
-        posterPath: json["poster_path"],
+        posterPath: "https://image.tmdb.org/t/p/w500${json["poster_path"]}",
         productionCompanies: json["production_companies"] == null
             ? []
             : List<ProductionCompany>.from(json["production_companies"]!
