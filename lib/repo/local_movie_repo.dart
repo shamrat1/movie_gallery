@@ -10,6 +10,7 @@ class MovieRepo {
   Future<HomeResponse?> getHomeData() async {
     try {
       final response = await THttpHelper.get("trending/all/day?language=en-US");
+      print(response);
       return HomeResponse.fromJson(response);
     } on SocketException catch (e) {}
   }
@@ -24,15 +25,13 @@ class MovieRepo {
         details.casts = casts.cast;
       }
       return details;
-    } on SocketException catch (e) {
-    } catch (e) {
-      print(e);
-    }
+    } on SocketException catch (e) {}
   }
 
   Future<MovieDetail?> getTVDetails(int id) async {
     try {
       final response = await THttpHelper.get("tv/$id?language=en-US");
+      print(response);
       return MovieDetail.fromJson(response);
     } on SocketException catch (e) {}
   }
@@ -41,6 +40,7 @@ class MovieRepo {
     try {
       final response =
           await THttpHelper.get("movie/$id/credits?language=en-US");
+      print(response);
       return CreditsResponse.fromJson(response);
     } on SocketException catch (e) {}
   }
@@ -49,6 +49,7 @@ class MovieRepo {
     try {
       final response =
           await THttpHelper.get("movie/now_playing?language=en-US");
+      print(response);
       return NowPlayingResponse.fromJson(response);
     } on SocketException catch (e) {}
   }
@@ -56,7 +57,8 @@ class MovieRepo {
   Future<NowPlayingResponse?> getUpcoming() async {
     try {
       final response = await THttpHelper.get("movie/upcoming?language=en-US");
-
+      print("++++++++++");
+      print(response);
       return NowPlayingResponse.fromJson(response);
     } on SocketException catch (e) {}
   }

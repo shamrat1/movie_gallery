@@ -11,7 +11,7 @@ class TElevatedButtonTheme {
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      minimumSize: const Size.fromHeight(40),
+      // minimumSize: const Size.fromHeight(40),
       foregroundColor: TColors.light,
       backgroundColor: TColors.primary,
       disabledForegroundColor: TColors.darkGrey,

@@ -23,6 +23,8 @@ class MovieDetail {
   List<String>? originCountry;
   String? originalLanguage;
   String? originalTitle;
+  String? originalName;
+  String? name;
   String? overview;
   double? popularity;
   String? posterPath;
@@ -52,6 +54,8 @@ class MovieDetail {
     this.originCountry,
     this.originalLanguage,
     this.originalTitle,
+    this.name,
+    this.originalName,
     this.overview,
     this.popularity,
     this.posterPath,
@@ -87,6 +91,8 @@ class MovieDetail {
             : List<String>.from(json["origin_country"]!.map((x) => x)),
         originalLanguage: json["original_language"],
         originalTitle: json["original_title"],
+        originalName: json["original_name"],
+        name: json["original_name"],
         overview: json["overview"],
         popularity: json["popularity"]?.toDouble(),
         posterPath: "https://image.tmdb.org/t/p/w500${json["poster_path"]}",

@@ -13,6 +13,14 @@ class THttpHelper {
       "Authorization": "Bearer $key",
       "accept": "application/json",
     });
+    if (endpoint.contains("tv")) {
+      print({
+        "url": '$baseUrl/$endpoint',
+        "Authorization": "Bearer $key",
+        "accept": "application/json",
+      });
+    }
+
     return _handleResponse(response);
   }
 

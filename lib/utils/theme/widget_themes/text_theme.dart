@@ -9,29 +9,29 @@ class TTextTheme {
 
   /// Customizable Light Text Theme
   static TextTheme lightTextTheme = TextTheme(
-    headlineLarge: GoogleFonts.lato(
+    headlineLarge: GoogleFonts.poppins(
         fontSize: 32.sp, fontWeight: FontWeight.bold, color: TColors.dark),
-    headlineMedium: GoogleFonts.lato(
+    headlineMedium: GoogleFonts.poppins(
         fontSize: 24.sp, fontWeight: FontWeight.w600, color: TColors.dark),
-    headlineSmall: GoogleFonts.lato(
+    headlineSmall: GoogleFonts.poppins(
         fontSize: 18.sp, fontWeight: FontWeight.w600, color: TColors.dark),
-    titleLarge: GoogleFonts.lato(
+    titleLarge: GoogleFonts.poppins(
         fontSize: 16.sp, fontWeight: FontWeight.w600, color: TColors.dark),
-    titleMedium: GoogleFonts.lato(
+    titleMedium: GoogleFonts.poppins(
         fontSize: 16.sp, fontWeight: FontWeight.w500, color: TColors.dark),
-    titleSmall: GoogleFonts.lato(
+    titleSmall: GoogleFonts.poppins(
         fontSize: 16.sp, fontWeight: FontWeight.w400, color: TColors.dark),
-    bodyLarge: GoogleFonts.lato(
+    bodyLarge: GoogleFonts.poppins(
         fontSize: 14.sp, fontWeight: FontWeight.w500, color: TColors.dark),
-    bodyMedium: GoogleFonts.lato(
+    bodyMedium: GoogleFonts.poppins(
         fontSize: 14.sp, fontWeight: FontWeight.normal, color: TColors.dark),
-    bodySmall: GoogleFonts.lato(
+    bodySmall: GoogleFonts.poppins(
         fontSize: 15.sp,
         fontWeight: FontWeight.w500,
         color: TColors.dark.withOpacity(0.5)),
-    labelLarge: GoogleFonts.lato(
+    labelLarge: GoogleFonts.poppins(
         fontSize: 12.sp, fontWeight: FontWeight.normal, color: TColors.dark),
-    labelMedium: GoogleFonts.lato(
+    labelMedium: GoogleFonts.poppins(
         fontSize: 12.sp,
         fontWeight: FontWeight.normal,
         color: TColors.dark.withOpacity(0.5)),
@@ -39,29 +39,29 @@ class TTextTheme {
 
   /// Customizable Dark Text Theme
   static TextTheme darkTextTheme = TextTheme(
-    headlineLarge: GoogleFonts.lato(
+    headlineLarge: GoogleFonts.poppins(
         fontSize: 32.sp, fontWeight: FontWeight.bold, color: TColors.light),
-    headlineMedium: GoogleFonts.lato(
+    headlineMedium: GoogleFonts.poppins(
         fontSize: 24.sp, fontWeight: FontWeight.w600, color: TColors.light),
-    headlineSmall: GoogleFonts.lato(
+    headlineSmall: GoogleFonts.poppins(
         fontSize: 18.sp, fontWeight: FontWeight.w600, color: TColors.light),
-    titleLarge: GoogleFonts.lato(
+    titleLarge: GoogleFonts.poppins(
         fontSize: 16.sp, fontWeight: FontWeight.w600, color: TColors.light),
-    titleMedium: GoogleFonts.lato(
+    titleMedium: GoogleFonts.poppins(
         fontSize: 16.sp, fontWeight: FontWeight.w500, color: TColors.light),
-    titleSmall: GoogleFonts.lato(
+    titleSmall: GoogleFonts.poppins(
         fontSize: 16.sp, fontWeight: FontWeight.w400, color: TColors.light),
-    bodyLarge: GoogleFonts.lato(
+    bodyLarge: GoogleFonts.poppins(
         fontSize: 14.sp, fontWeight: FontWeight.w500, color: TColors.light),
-    bodyMedium: GoogleFonts.lato(
+    bodyMedium: GoogleFonts.poppins(
         fontSize: 14.sp, fontWeight: FontWeight.normal, color: TColors.light),
-    bodySmall: GoogleFonts.lato(
+    bodySmall: GoogleFonts.poppins(
         fontSize: 14.sp,
         fontWeight: FontWeight.w500,
         color: TColors.light.withOpacity(0.5)),
-    labelLarge: GoogleFonts.lato(
+    labelLarge: GoogleFonts.poppins(
         fontSize: 12.sp, fontWeight: FontWeight.normal, color: TColors.light),
-    labelMedium: GoogleFonts.lato(
+    labelMedium: GoogleFonts.poppins(
         fontSize: 12.sp,
         fontWeight: FontWeight.normal,
         color: TColors.light.withOpacity(0.5)),

@@ -1,79 +1,17 @@
-import 'dart:math';
-
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_gallery/models/home_response.dart';
-import 'package:movie_gallery/models/now_playing_response.dart';
-import 'package:movie_gallery/states/all_trending_provider.dart';
-import 'package:movie_gallery/states/now_playing_provider.dart';
-import 'package:movie_gallery/states/upcoming_provider.dart';
-import 'package:movie_gallery/widgets/now_playing_carousel.dart';
-import 'package:movie_gallery/widgets/trending_carousel.dart';
-import 'package:movie_gallery/widgets/upcoming_cards_carousel.dart';
-import 'package:overlapped_carousel/overlapped_carousel.dart';
+import 'package:movie_gallery/screens/movie_details.dart';
 
-class HomePage extends ConsumerStatefulWidget {
-  const HomePage({super.key, this.response});
-  final HomeResponse? response;
-  @override
-  ConsumerState<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends ConsumerState<HomePage> {
+class CarouselItem extends StatelessWidget {
+  const CarouselItem({super.key, this.result});
+  final Result? result;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Movie Gallery"),
-      ),
-      body: ListView(
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-            child: Text(
-              "Trending",
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ),
-          const TrendingCarousel(),
-          SizedBox(
-            height: 8.h,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-            child: Text(
-              "Now Playing",
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ),
-          const NowPlayingCarousel(),
-          SizedBox(
-            height: 8.h,
-          ),
-          SizedBox(
-            height: 8.h,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-            child: Text(
-              "Best Upcoming",
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ),
-          const UpcomingCardsCarousel(),
-        ],
-      ),
-    );
-  }
-
-  Widget _getAllMoviesCarousel(Result? result) {
     return GestureDetector(
-      onTap: () {
-        print(result?.backdropPath ?? "N/A");
-      },
+      onTap: () => Navigator.push(context,
+          MaterialPageRoute(builder: (ctx) => MovieDetailPage(movie: result!))),
       child: Stack(
         children: [
           Positioned.fill(

@@ -37,9 +37,9 @@ class Result {
   String? originalTitle;
   String overview;
   String? posterPath;
-  MediaType? mediaType;
+  String? mediaType;
   bool? adult;
-  OriginalLanguage? originalLanguage;
+  String? originalLanguage;
   List<int>? genreIds;
   double? popularity;
   DateTime? releaseDate;
@@ -74,17 +74,15 @@ class Result {
   });
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
-        backdropPath: json["backdrop_path"],
+        backdropPath: "https://image.tmdb.org/t/p/w500${json["backdrop_path"]}",
         id: json["id"],
         title: json["title"],
         originalTitle: json["original_title"],
         overview: json["overview"],
-        posterPath: json["poster_path"],
-        mediaType: mediaTypeValues.map[json["media_type"]]!,
+        posterPath: "https://image.tmdb.org/t/p/w500${json["poster_path"]}",
+        mediaType: json["media_type"],
         adult: json["adult"],
-        originalLanguage:
-            originalLanguageValues.map[json["original_language"]] ??
-                OriginalLanguage.EN,
+        originalLanguage: json["original_language"],
         genreIds: json["genre_ids"] == null
             ? []
             : List<int>.from(json["genre_ids"]!.map((x) => x)),
@@ -112,9 +110,9 @@ class Result {
         "original_title": originalTitle,
         "overview": overview,
         "poster_path": posterPath,
-        "media_type": mediaTypeValues.reverse[mediaType],
+        "media_type": mediaType,
         "adult": adult,
-        "original_language": originalLanguageValues.reverse[originalLanguage],
+        "original_language": originalLanguage,
         "genre_ids":
             genreIds == null ? [] : List<dynamic>.from(genreIds!.map((x) => x)),
         "popularity": popularity,
@@ -131,26 +129,4 @@ class Result {
             ? []
             : List<dynamic>.from(originCountry!.map((x) => x)),
       };
-}
-
-enum MediaType { MOVIE, TV }
-
-final mediaTypeValues =
-    EnumValues({"movie": MediaType.MOVIE, "tv": MediaType.TV});
-
-enum OriginalLanguage { EN, IT }
-
-final originalLanguageValues =
-    EnumValues({"en": OriginalLanguage.EN, "it": OriginalLanguage.IT});
-
-class EnumValues<T> {
-  Map<String, T> map;
-  late Map<T, String> reverseMap;
-
-  EnumValues(this.map);
-
-  Map<T, String> get reverse {
-    reverseMap = map.map((k, v) => MapEntry(v, k));
-    return reverseMap;
-  }
 }

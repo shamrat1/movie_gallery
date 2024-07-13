@@ -74,21 +74,6 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
-  @override
-  void initState() {
-    super.initState();
-    MovieRepo().getHomeData().then((v) {
-      for (Result m in v?.results ?? []) {
-        print({
-          "id": m.id,
-          "name": m.name ?? m.originalTitle,
-          "type": m.mediaType,
-        });
-      }
-    });
-    MovieRepo().getMovieDetails(653346).then((v) => Navigator.push(context,
-        MaterialPageRoute(builder: (ctx) => MovieDetailPage(detail: v!))));
-  }
 
   @override
   Widget build(BuildContext context) {
